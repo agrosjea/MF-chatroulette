@@ -33,7 +33,7 @@ chatServer = sockjs.createServer {
 
 httpServer = http.createServer app
 chatServer.installHandlers httpServer
-httpServer.listen 10001, '127.0.0.1'
+httpServer.listen 10002, '127.0.0.1'
 
 dtNow = ->
 	return "[#{ moment().format('MM/DD/YYYY hh:mm:ss A') }]"
