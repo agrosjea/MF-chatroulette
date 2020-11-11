@@ -33,7 +33,7 @@ chatServer = sockjs.createServer {
 
 httpServer = http.createServer app
 chatServer.installHandlers httpServer
-httpServer.listen 80, '127.0.0.1'
+httpServer.listen 80
 
 dtNow = ->
 	return "[#{ moment().format('MM/DD/YYYY hh:mm:ss A') }]"
@@ -58,7 +58,7 @@ chatServer.on 'connection', (conn) ->
 	for ipr in app.get('ipWhitelist')
 		#if cidrMatch.cidr_match conn.ip, ipr
 		conn.verified = true
-			break
+		break
 
 	conn.writeJSON {type: 'localVerified', verified: conn.verified}
 	console.log "#{ conn.id } (verified: #{ conn.verified }) connected from #{ conn.ip }"

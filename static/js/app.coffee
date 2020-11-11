@@ -74,10 +74,10 @@ MainCtrl = ($rootScope, $scope, $timeout, settings, moment, sockjs) ->
 		return "[#{ moment().format('MM/DD/YYYY hh:mm:ss A') }]"
 
 	$scope.supported = true
-	$scope.connected = false
+	$scope.connected = true
 	$scope.waiting = true
-	$scope.localVerified = false
-	$scope.remoteVerified = false
+	$scope.localVerified = true
+	$scope.remoteVerified = true
 	$scope.messages = []
 	getUserMedia {audio: true, video: true}, (stream) ->
 		attachMediaStream($('#local-video')[0], stream)
