@@ -25,7 +25,7 @@ app.get '/', (req, res) ->
 
 chatServer = sockjs.createServer {
 	prefix: '/server',
-	sockjs_url: 'http://cdn.sockjs.org/sockjs-0.3.min.js',
+	sockjs_url: 'https://cdn.jsdelivr.net/sockjs/0.3/sockjs.min.js',
 	log: (severity, message) ->
 		if severity == 'error'
 			console.log message
