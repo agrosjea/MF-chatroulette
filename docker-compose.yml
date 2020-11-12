@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  mf-chatroulette :
+    build: 
+      context : .
+    restart: "always"
+    image: agrosjea/mf-chatroulette
+    container_name: "mf-chatroulette"
+    environment:
+      PORT: 80
+      VIRTUAL_HOST: mfchatroulette.tk
+      LETSENCRYPT_HOST: mfchatroulette.tk
+      LETSENCRYPT_EMAIL: grosjean.arnaud@gmail.com
+    networks:     
+      - letsencrypt
+
+networks:
+  letsencrypt:
+    external: true
+
