@@ -11,7 +11,7 @@ services:
       PORT: 80
       VIRTUAL_HOST: mfchatroulette.tk
       LETSENCRYPT_HOST: mfchatroulette.tk
-      LETSENCRYPT_EMAIL: grosjean.arnaud@gmail.com
+      LETSENCRYPT_EMAIL: your@email.com
     networks:     
       - letsencrypt
 
